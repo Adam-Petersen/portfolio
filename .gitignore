@@ -32,4 +32,4 @@ yarn-debug.log*
 .yarn-integrity
 
 # Ignore chess
-/app/javascript/chess/*
+/app/javascript/chess/
