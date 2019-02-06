@@ -14,5 +14,10 @@
  *= require_tree .
  *= require_self
  */
-
+ @import "variables";
  @import "bootstrap";
+
+html, body {
+   background-color: $dark-color;
+   height: 100%;
+ }

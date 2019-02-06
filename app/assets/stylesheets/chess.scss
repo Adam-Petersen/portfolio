@@ -1,0 +1,97 @@
+$tile-size: 75px;
+$board-size: $tile-size * 8;
+$mode-select-height: 0.8;
+
+.board {
+  margin: 40px auto;
+
+  &.transparent {
+    height: $board-size;
+    width: $board-size;
+    background-image: url("/images/chess-preview.JPG");
+    background-size: $board-size $board-size;
+    background-color: rgba(230, 230, 230, 0.6);
+    background-blend-mode: lighten;
+    padding-top: $board-size * (1-$mode-select-height) / 2.0;
+  }
+}
+
+.tile {
+  position: relative;
+  height: $tile-size;
+  width: $tile-size; }
+  .dark {
+    background-color: #825201; }
+  .light {
+    background-color: #b69b4c; }
+  .highlighted {
+    outline: 5px solid #38fc11;
+    outline-offset: -5px;
+  }
+  .target {
+    outline: 5px solid blue;
+    outline-offset: -5px;
+  }
+
+table, th, td {
+  table-layout: fixed;
+  margin: 0px;
+  padding: 0px;
+  border-spacing: 0;
+  height: $tile-size;
+  width: $tile-size;
+}
+
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
+img {
+  width: $tile-size;
+  height: $tile-size;
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0
+}
+
+.checkmate {
+  opacity: 0.5;
+}
+
+.checkmate-text {
+  position: absolute;
+  margin-top: $board-size / 2;
+  width: $board-size;
+  font-size: 40px;
+  color: #000;
+  text-align: center;
+  font-weight: bold;
+}
+
+.mode-select {
+  height: $board-size * $mode-select-height;
+  width: $board-size * .55;
+  margin: 0 auto;
+  background-color: rgba(50, 50, 50, 0.85);
+  padding-top: 50px;
+
+  .mode-header {
+    text-align: center;
+    color: #ffffff;
+    font-size: 34px;
+    font-weight: 600;
+  }
+}
+
+.mode-button {
+  display: block;
+  height: 50px;
+  width: 200px;
+  margin: 50px auto;
+}
+
+.player-name {
+  margin: 0 auto;
+}

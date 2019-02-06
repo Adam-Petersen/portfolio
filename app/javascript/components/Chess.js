@@ -1,11 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
-import BoardLayout from "../chess/components/BoardLayout"
+import Game from "../chess/components/Game"
 
 class Chess extends React.Component {
   render () {
     return (
-      <BoardLayout/>
+      <Game/>
     );
   }
 }

@@ -1,56 +1,76 @@
 // Place all the styles related to the projects controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.tile {
-  position: relative;
-  height: 100px;
-  width: 100px; }
-  .dark {
-    background-color: #825201; }
-  .light {
-    background-color: #b69b4c; }
-  .highlighted {
-    outline: 5px solid #38fc11;
-    outline-offset: -5px;
+@import "variables";
+@import "chess";
+$chess-image-size: 250px;
+
+.project-header {
+  width: $box-width;
+  background-color: $light-color;
+  margin: 30px auto;
+
+  h2 {
+    padding: 20px 0px;
+    text-decoration: underline;
+    text-align: center;
+    font-family: Oswald, "Trebuchet MS", Arial, sans-serif;
   }
-  .target {
-    outline: 5px solid blue;
-    outline-offset: -5px;
+
+  p {
+    text-align: center;
+    padding: 0px 40px 20px 40px;
+    font-size: 16px;
+  }
+}
+
+.project {
+  height: auto;
+  width: $box-width;
+  background-color: $light-color;
+  margin: 30px auto;
+  padding: 15px 30px;
+
+  .row {
+    height: auto;
+    div[class^="col-"] {
+
+      .preview {
+        height: $chess-image-size;
+        width: $chess-image-size;
+        margin: 40px auto;
+
+        img {
+          height: 100%;
+          width: 100%;
+          position: static;
+
+          &:hover {
+            opacity: 0.4;
+          }
+        }
+      }
+
+
+      &.right {
+        text-align: center;
+
+        .title {
+          margin: 8px 0px 15px 0px;
+          text-decoration: underline;
+          font-family: $title-font-family;
+          color: $font-color;
+          font-size: 1.75rem;
+        }
+
+        .description {
+          margin: 15px 0px;
+        }
+        .github {
+          margin-top: 50px;
+        }
+      }
+    }
   }
 
-table, th, td {
-  table-layout: fixed;
-  margin: 0px;
-  padding: 0px;
-  border-spacing: 0;
-  height: 100px;
-  width: 100px;
-}
-
-p {
-  margin: 0px;
-  padding: 0px;
-}
-
-img {
-  width: 100px;
-  height: 100px;
-  overflow: auto;
-  margin: auto;
-  position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0
-}
-
-.checkmate {
-  opacity: 0.5;
-}
-
-.checkmate-text {
-  position: absolute;
-  margin-top: 350px;
-  width: 800px;
-  font-size: 40px;
-  color: #000;
-  text-align: center;
-  font-weight: bold;
 }
