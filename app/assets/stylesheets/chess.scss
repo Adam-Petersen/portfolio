@@ -1,9 +1,42 @@
+@import "variables";
+
+
 $tile-size: 75px;
 $board-size: $tile-size * 8;
 $mode-select-height: 0.8;
+$light-tile-color: #b69b4c;
+$dark-tile-color: #825201;
+$outline-color: #38fc11;
+$light-player-color: rgba(182, 155, 76, 0.3);
+$dark-player-color: rgba(130, 82, 1, 0.6);
+$player-outline-color: rgba(0, 0, 0, 0.75);
+
+
+.chess-title {
+  width: 100%;
+  text-align: center;
+  position: relative;
+
+  .title {
+    text-decoration: underline;
+    font-family: $title-font-family;
+    color: $font-color;
+    font-size: 2.0rem;
+  }
+
+  .back {
+    position: absolute;
+    left: 0;
+    top: 50%; transform: translateY(-50%);
+    padding-left: 50px;
+    font-family: $title-font-family;
+    color: $font-color;
+    font-size: 1.4rem;
+  }
+}
 
 .board {
-  margin: 40px auto;
+  margin: 15px auto;
 
   &.transparent {
     height: $board-size;
@@ -16,16 +49,20 @@ $mode-select-height: 0.8;
   }
 }
 
+.game {
+  margin: 0px auto;
+}
+
 .tile {
   position: relative;
   height: $tile-size;
   width: $tile-size; }
   .dark {
-    background-color: #825201; }
+    background-color: $dark-tile-color; }
   .light {
-    background-color: #b69b4c; }
+    background-color: $light-tile-color; }
   .highlighted {
-    outline: 5px solid #38fc11;
+    outline: 5px solid $outline-color;
     outline-offset: -5px;
   }
   .target {
@@ -62,12 +99,15 @@ img {
 
 .checkmate-text {
   position: absolute;
-  margin-top: $board-size / 2;
+  margin-top: ($board-size / 2) - 50px;
   width: $board-size;
   font-size: 40px;
   color: #000;
+  font-weight: 800;
+  z-index: 1;
+  left: 50%;
+  transform: translate(-50%, 0);
   text-align: center;
-  font-weight: bold;
 }
 
 .mode-select {
@@ -93,5 +133,23 @@ img {
 }
 
 .player-name {
+  display: block;
+  width: 15%;
   margin: 0 auto;
+  text-align: center;
+  height: 40px;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: arial, auto;
+
+  &.light {
+    background-color: $light-player-color;
+  }
+  &.dark {
+    background-color: $dark-player-color;
+  }
+  &.up-next {
+    outline: 5px solid $player-outline-color;
+    outline-offset: -5px;
+  }
 }
