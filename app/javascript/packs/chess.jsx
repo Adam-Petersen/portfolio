@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import BoardLayout from '../chess/components/BoardLayout'
+import BoardLayout from '../chess/components/Game'
 
 document.addEventListener('DOMContentLoaded', (test) => {
   console.log(test);
   ReactDOM.render(
-    <BoardLayout/>,
+    <Game/>,
     document.body.appendChild(document.createElement('div')),
   )
 })
