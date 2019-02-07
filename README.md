@@ -20,5 +20,13 @@ Things you may want to cover:
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
+  cd into deployment root folder
+  git pull
+  cd app/javascript/chess
+  git pull
+  bundle install --deployment --without development test
+  bundle exec rake assets:precompile db:migrate RAILS_ENV=production
+  sudo service apache2 restart
+  
 
 * ...
