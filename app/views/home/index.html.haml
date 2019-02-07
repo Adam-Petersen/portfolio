@@ -1,2 +1,23 @@
-.page
-  %h3 Welcome to Adam Petersen's personal website! This site is currently under construction, so please be sure to check back later for update progress!
+.home-header
+  %img{src: "/images/profile.jpg"}
+  %h3 Adam Petersen
+  %p Graduating senior attending The University of Minnesota, Twin Cities. Seeking a full time position as a software engineer.
+
+.quick-links
+  .header Quick Links
+  .row
+    .col-xl-4
+      .quick-link.left
+        %p Resume
+        %a{href: home_resume_path}
+          %img.left{src: "/images/resume_icon.png"}
+    .col-xl-4
+      .quick-link
+        %p LinkedIn
+        %a{href: "https://www.linkedin.com/in/adampetersenumn/"}
+          %img{src: "images/linkedin_icon.png"}
+    .col-xl-4
+      .quick-link.right
+        %p GitHub
+        %a{href: "https://github.com/Adam-Petersen"}
+          %img.left{src: "images/github_icon2.png"}
