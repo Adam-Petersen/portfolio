@@ -1,1 +1,15 @@
-%p Under construction...
+=render "modal"
+
+.project-header
+  %h2 Portfolio
+  %p This page is dedicated to highlighting my skills, experiences, and qualifications. I will try to cover everything on my resume and go more in depth to my personal and professional experiences in software development.
+
+.outer-section
+  .title Health Risk Assessment
+  .row
+    .col-xl-3
+      .preview
+        %a#open{href: '#'}
+          %img{src: "/images/ribbon.png"}
+    .col-xl-9
+      .description Medicom Health, the company I interned for in 2018, specializes in creating online, customizable health risk assessments called "Profilers". A health risk assessment is an interactive set of medical questions that, when completed, results in the user being shown information regarding how at risk they are for various medical issues. Medicom's profilers are generally sold to hospital marketing teams. Because they are customizable, the client can add their own logos, colors, questions, and more to the app.<br/><br/> As a software engineer intern, I was tasked with creating a colorectal cancer risk assessment. The front end of the app is written in React.js, and the backend is written in Java. Backend tasks included performing risk calculations and dynamic pdf generation. In a little over a month I transformed a set of designs into a shippable product. To the left is a real life example of a colorectal risk profiler being used by Advocate Health Care. Another example can be found on Baptist Health's website.

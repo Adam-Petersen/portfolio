@@ -1,3 +1,24 @@
 // Place all the styles related to the about controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'variables';
+
+.about-section {
+  width: 75%;
+  overflow: auto;
+  background-color: $light-color;
+  margin: 0 auto;
+  margin-bottom: 50px;
+
+  h3 {
+    padding-top: 10px;
+    width: 100%;
+    text-align: center;
+    color: $font-color;
+    font-family: $title-font-family;
+    font-weight: 650;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 24px;
+  }
+}

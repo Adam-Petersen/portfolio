@@ -3,31 +3,33 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import 'variables';
 .home-header {
-  position: relative;
-  height: 375px;
+  display: block;
+  overflow: auto;
   width: 75%;
   background-color: $light-color;
   margin: 0 auto;
   margin-bottom: 50px;
 
-  img {
-    display: block;
-    position: absolute;
-    margin: 30px auto;
+  .profile-img {
     height: 150px;
     width: 150px;
-    border-radius: 50%;
-    border-style: solid;
-    border-width: 1px;
-    border-color: $font-color;
-    padding: .5rem;
-
-
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    img {
+      height: 150px;
+      width: 150px;
+      border-radius: 50%;
+      border-style: solid;
+      border-width: 1px;
+      border-color: $font-color;
+      padding: .5rem;
+    }
   }
+
   h3 {
     width: 100%;
-    position: absolute;
-    margin-top: 200px;
     text-align: center;
     color: $font-color;
     font-family: $title-font-family;
@@ -39,9 +41,7 @@
 
   p {
     width: 100%;
-    position: absolute;
-    margin-top: 275px;
-    padding: 0 30%;
+    padding: 0 25%;
     text-align: center;
     color: $font-color;
     font-size: 20px;
@@ -49,8 +49,8 @@
 }
 
 .quick-links {
-  height: 350px;
   width: 75%;
+  overflow: auto;
   background-color: $light-color;
   margin: 0 auto;
   .header {
@@ -65,17 +65,11 @@
     font-size: 30px;
   }
 
-  a {
-    display: block;
-    width: 100%;
-    text-align: center;
-  }
-
-
-
   .quick-link {
-    position: relative;
+    height: 100%;
+    width: 100%;
     p {
+      display: block;
       width: 100%;
       text-align: center;
       color: $font-color;
@@ -85,35 +79,27 @@
       font-size: 20px;
     }
 
-    img {
-      position: absolute;
+    .link-image {
       height: 175px;
       width: 175px;
-      margin-top: 50px;
       margin-left: auto;
       margin-right: auto;
-      padding: 15px;
-      border: 2px solid $font-color;
-      border-radius: 5px;
+      margin-top: 20px;
+      margin-bottom: 30px;
+      img {
+        display: block;
+        height: 175px;
+        width: 175px;
+        padding: 15px;
+        border: 2px solid $font-color;
+        border-radius: 5px;
 
-      &:hover {
-        opacity: 0.5;
-      }
-      &.left {
-        margin-left: 100px;
-      }
-
-      &.right {
-        margin-right: 100px;
+        &:hover {
+          opacity: 0.5;
+        }
       }
     }
 
-    &.left {
-      margin-left: 100px;
-    }
 
-    &.right {
-      margin-right: 100px;
-    }
   }
 }

@@ -1,17 +1,22 @@
 .menu-bar
-  .row
-    .col-xl-7
-      %a.name{href: root_path} Adam Petersen
-    .col-xl-5
-      .row
-        .col-2
-          %a.menu-button{href: root_path} Home
-        .col-2
-          %a.menu-button.disabled{href: about_index_path} About
-        .col-2
-          %a.menu-button{href: portfolio_index_path} Portfolio
-        .col-2
-          %a.menu-button{href: projects_index_path} Projects
-        .col-2
-          %a.menu-button{href: contact_index_path} Contact
-        .col-2
+  .container-fluid
+    .row
+      .col-xl-6
+        .menu-button.name
+          %a{href: root_path} Adam Petersen
+      .col-xl-6
+        .row
+          .col-2
+          .col-2
+            .menu-button
+              %a{href: root_path} Home
+          .col-2
+            .menu-button
+              %a{href: portfolio_index_path} Portfolio
+          .col-2
+            .menu-button
+              %a{href: projects_index_path} Projects
+          .col-2
+            .menu-button
+              %a{href: contact_index_path} Contact
+          .col-2
