@@ -4,15 +4,26 @@
 
 .project
   .row
-    .col-xl-4.left.col-lg-12
-      -#.test
+    .col-xl-3
       .preview
         %a{href: projects_chess_path}
           %img.project-preview{src: "/images/chess-preview.JPG"}
-      -#= link_to "Chess", projects_chess_path
-    .col-md-8.right
+    .col-xl-9
       %a.title{href: projects_chess_path} React Chess
       %p.description This is an app I wrote to further my knowledge of React JS. It is currently a work in progress. Currently you can only do two person local play, but soon I plan to add functionality for two person online play and an one person v. AI mode. More information about the app can be found in the applications README on Github.
       %p.github
         %strong Github:
         %a{href: 'https://github.com/Adam-Petersen/adamp-react-chess', target: '_blank'} https://github.com/Adam-Petersen/adamp-react-chess
+
+.project
+  .row
+    .col-xl-3
+      .preview
+        %a{href: root_path}
+          %img.project-preview.wide{src: '/images/home_preview_dark.JPG'}
+    .col-xl-9
+      %a.title{href: root_path} Personal Website
+      %p.description The website you're currently on is made using Ruby on Rails.
+      %p.github
+        %strong Github
+        %a{href: 'https://github.com/Adam-Petersen/portfolio', target: '_blank'} https://github.com/Adam-Petersen/portfolio
