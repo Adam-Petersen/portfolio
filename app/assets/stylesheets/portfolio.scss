@@ -3,9 +3,28 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import 'variables';
 
+.portfolio-header {
+  width: $wide-box-width;
+  background-color: $light-color;
+  margin: 30px auto;
+
+  h2 {
+    padding: 20px 0px;
+    text-decoration: underline;
+    text-align: center;
+    font-family: Oswald, "Trebuchet MS", Arial, sans-serif;
+  }
+
+  p {
+    text-align: center;
+    padding: 0px 40px 20px 40px;
+    font-size: 16px;
+  }
+}
+
 .outer-section {
   height: auto;
-  width: $box-width;
+  width: $wide-box-width;
   background-color: $light-color;
   margin: 30px auto;
   padding: 15px 30px;
@@ -19,20 +38,61 @@
   }
 
   .preview {
-    height: 200px;
-    width: 200px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 40px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     a > img {
-      height: 100%;
-      width: 100%;
-      overflow: visible;
+      width: 150px;
 
       &:hover {
         opacity: 0.5;
       }
+    }
+  }
+
+  .job {
+    margin-top: 20px;
+    border-top: 1px solid #BDBDBD;
+
+    .job-title {
+      text-align: center;
+      font-size: 20px;
+      font-family: $title-font-family;
+      color: $font-color;
+      text-decoration: underline;
+      margin-top: 10px;
+    }
+   /*.logo {
+     height: 100%;
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+      img {
+        display: block;
+        width: 100%;
+        max-width: 150px;
+        margin: 20px auto;
+      }
+    } */
+    img {
+      display: inline-block;
+      width: 10%;
+      max-width: 100px;
+      float: left;
+      margin-right: 20px;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+
+    .job-description {
+      margin-top: 20px;
+      margin-left: 20px;
     }
   }
 
