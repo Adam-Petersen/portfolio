@@ -79,10 +79,21 @@ $player-outline-color: rgba(0, 0, 0, 0.75);
         outline: 5px solid $outline-color;
         outline-offset: -5px;
       }
-      &.target {
+      &.debug-target {
         outline: 5px solid blue;
         outline-offset: -5px;
       }
+      &.possible-target {
+        outline: 5px solid #91bbff;
+        outline-offset: -5px;
+      }
+      .react-draggable {
+        z-index: 997;
+      }
+      .react-draggable-dragged {
+        z-index: 998;
+      }
+
     }
 
     table, th, td {
