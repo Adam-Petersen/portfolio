@@ -1,3 +1,26 @@
 // Place all the styles related to the contact controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "variables";
+
+.contact-header {
+  width: 40%;
+  background-color: $light-color;
+  margin: 50px auto;
+  padding: 10px 30px;
+  .title {
+    text-decoration: underline;
+    text-align: center;
+    font-family: Oswald, "Trebuchet MS", Arial, sans-serif;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  p {
+
+  }
+
+  ol > li {
+    text-align: center;
+  }
+}
