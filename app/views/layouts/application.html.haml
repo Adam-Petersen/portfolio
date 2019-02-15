@@ -2,12 +2,13 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title Portfolio
+    %title Adam Petersen
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = stylesheet_link_tag    'application', 'https://fonts.googleapis.com/css?family=Montserrat|Oswald'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = favicon_link_tag '/images/favicon_blue.ico'
   %body
     = render "shared/menu_bar"
     = yield
