@@ -78,6 +78,10 @@ $player-outline-color: rgba(0, 0, 0, 0.75);
       -moz-user-drag: none;
       -o-user-drag: none;
       user-drag: none;
+
+      &.possible-target-piece {
+        opacity: 0.6;
+      }
     }
 
     .tile {
