@@ -50,5 +50,3 @@ test:
 production:
   <<: *default
   database: portfolio
-  username: <%= ENV['PORTFOLIO_DATABASE_USERNAME'] %>
-  password: <%= ENV['PORTFOLIO_DATABASE_PASSWORD'] %>

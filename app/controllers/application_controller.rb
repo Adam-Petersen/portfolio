@@ -1,5 +1,3 @@
-require 'pry'
-
 class ApplicationController < ActionController::Base
   before_action :log_connection
 
