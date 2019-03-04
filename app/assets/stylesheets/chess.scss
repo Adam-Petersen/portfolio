@@ -66,7 +66,7 @@ $player-outline-color: rgba(0, 0, 0, 0.75);
       padding-top: $board-size * (1-$mode-select-height) / 2.0;
     }
 
-    img {
+    .image {
       width: $tile-size;
       height: $tile-size;
       overflow: auto;
@@ -142,9 +142,14 @@ $player-outline-color: rgba(0, 0, 0, 0.75);
       transform: translateX(-50%);
     }
 
+    #last-move {
+      position: absolute;
+      left: 70%;
+      transform: translateX(-70%);
+    }
+
     #turn-indicator {
       padding-left: 50px;
-
     }
     margin: 5px 0;
   }
@@ -172,6 +177,10 @@ $player-outline-color: rgba(0, 0, 0, 0.75);
     margin: 0 auto;
     background-color: rgba(50, 50, 50, 0.85);
     padding-top: 50px;
+
+    &.wide {
+      width: $board-size * .65;
+    }
 
     .mode-header {
       text-align: center;
@@ -209,4 +218,162 @@ $player-outline-color: rgba(0, 0, 0, 0.75);
       outline-offset: -5px;
     }
   }
+
+  .online-mode-select {
+    height: $board-size * $mode-select-height;
+    width: $board-size * .65;
+    margin: 0 auto;
+    background-color: rgba(50, 50, 50, 0.85);
+    padding-top: 10px;
+
+    .online-header {
+      text-align: center;
+      color: #ffffff;
+      font-size: 34px;
+      font-weight: 600;
+    }
+
+    .online-input {
+      width: 100%;
+      margin: 20px auto;
+      height: 75px;
+
+      .game-finder-label {
+        display: block;
+        color: white;
+        margin-top: 10px;
+        font-size: 25px;
+        text-align: center;
+      }
+
+      .input-line {
+        text-align: center;
+      }
+
+      .game-finder-input {
+        margin-right: 5px;
+
+        &.error {
+          border: 1px solid rgba(255, 100, 100, .9);
+          background-color: rgba(255, 100, 100, .9);
+          padding-left: 5px;
+          color: white;
+        }
+      }
+
+      .host-loader {
+        height: 20px;
+        width: 20px;
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        img {
+          display: block;
+          margin: 0 auto;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          height: 60%;
+        }
+      }
+    }
+
+    // Css for this bit modified from: https://stackoverflow.com/questions/5214127/css-technique-for-a-horizontal-line-with-words-in-the-middle
+    .or {
+      overflow: hidden;
+      text-align: center;
+      margin: 30px 10px;
+      color: white;
+      font-size: 20px;
+    }
+
+    .or:before,
+    .or:after {
+      background-color: #fff;
+      content: "";
+      display: inline-block;
+      height: 1px;
+      position: relative;
+      vertical-align: middle;
+      width: 50%;
+    }
+
+    .or:before {
+      right: 0.5em;
+      margin-left: -50%;
+    }
+
+    .or:after {
+      left: 0.5em;
+      margin-right: -50%;
+    }
+    // End stack overflow bit
+
+    #random-button {
+      padding: 0;
+      display: block;
+      height: 50px;
+      width: auto;
+      margin: 0 auto;
+      padding: 0 10px;
+
+      span {
+        display: inline-block;
+        height: 50px;
+        line-height: 50px;
+        vertical-align: middle;
+      }
+
+      .loader {
+        height: 50px;
+        width: 50px;
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        img {
+          display: block;
+          margin: 0 auto;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          height: 60%;
+        }
+      }
+    }
+  }
+
+  #overlay-wrapper {
+    width: $board-size;
+    height: $board-size;
+    position: absolute;
+    margin-left: 30px;
+  }
+
+  #overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ddd;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    z-index: 998;
+  }
+
+  .overlay-text {
+    position: absolute;
+    margin-top: ($board-size / 2) - 50px;
+    width: $board-size;
+    font-size: 40px;
+    color: #111;
+    font-weight: 800;
+    z-index: 999;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+  }
+
 }
