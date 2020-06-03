@@ -1,32 +1,7 @@
-# README
+This is the code for my portfolio site, which is currently outdated.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+I created this site to showcase some of my web development skills, as well as host my resume and some projects I had been working on.
 
-Things you may want to cover:
+The site is still live, and can be found at http://www.adam-petersen.com/
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-  cd into deployment root folder
-  git pull
-  cd app/javascript/chess
-  git pull
-  bundle install --deployment --without development test
-  bundle exec rake assets:precompile db:migrate RAILS_ENV=production
-  sudo service apache2 restart
-  
-
-* ...
+Please ignore the bad picture of me :)
